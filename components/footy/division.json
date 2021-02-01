@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_footy_divisions",
+  "info": {
+    "name": "Division",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "divisionName": {
+      "type": "enumeration",
+      "enum": [
+        "First",
+        "Second",
+        "Third",
+        "Ladies"
+      ]
+    },
+    "score": {
+      "type": "string",
+      "maxLength": 10
+    },
+    "result": {
+      "type": "enumeration",
+      "enum": [
+        "Win",
+        "Loss"
+      ]
+    }
+  }
+}

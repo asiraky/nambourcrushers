@@ -5,14 +5,14 @@ import Article from "../components/Article";
 import Seo from "../components/Seo";
 import { fetchAPI } from "../lib/api";
 
-const News = ({ newsPage, news }) => {
+const Events = ({ eventsPage, events }) => {
     return (
         <Layout>
-            <Seo seo={newsPage.seo} />
+            <Seo seo={eventsPage.seo} />
             <div>
-                <h1>{newsPage.hero.title}</h1>
+                <h1>{eventsPage.hero.title}</h1>
                 <ul>
-                    {news.map(n => <Article key={n.slug} article={n.article} link={`/news/${n.slug}`} />)}
+                    {events.map(e => <Article key={e.slug} article={e.article} link={`/events/${e.slug}`} />)}
                 </ul>
             </div>
         </Layout>
@@ -20,15 +20,15 @@ const News = ({ newsPage, news }) => {
 };
 
 export async function getStaticProps() {
-    const [newsPage, news] = await Promise.all([
-        fetchAPI("/news-page"),
-        fetchAPI("/stories"),
+    const [eventsPage, events] = await Promise.all([
+        fetchAPI("/events-page"),
+        fetchAPI("/events"),
     ]);
 
     return {
-        props: { newsPage, news },
+        props: { eventsPage, events },
         revalidate: 1,
     };
 }
 
-export default News;
+export default Events;

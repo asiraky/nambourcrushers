@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fixtures",
+  "info": {
+    "name": "Fixture",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "round": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Home",
+        "Away"
+      ],
+      "required": true,
+      "default": "Home"
+    },
+    "opposition": {
+      "type": "string"
+    },
+    "division": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footy.division"
+    }
+  }
+}

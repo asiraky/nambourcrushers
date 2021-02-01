@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Event",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "startsAt": {
+      "type": "datetime"
+    },
+    "endsAt": {
+      "type": "datetime"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "article": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.article",
+      "required": true
+    }
+  }
+}

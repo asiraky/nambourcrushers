@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news",
+  "info": {
+    "name": "Story"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "article": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.article",
+      "required": true
+    }
+  }
+}

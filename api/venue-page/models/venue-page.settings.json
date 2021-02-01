@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "venue_pages",
+  "info": {
+    "name": "Venue Page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.hero"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

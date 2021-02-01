@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fixtures-page",
+      "handler": "fixtures-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fixtures-page",
+      "handler": "fixtures-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fixtures-page",
+      "handler": "fixtures-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
