@@ -5,5 +5,8 @@ module.exports = ({ env }) => ({
     auth: {
       secret: env('ADMIN_JWT_SECRET', '044d6919c75b29d97aaab5563ccd7937'),
     },
+    watchIgnoreFiles: [
+      '**/frontend/**',
+    ]
   },
 });
