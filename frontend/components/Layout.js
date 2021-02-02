@@ -8,7 +8,7 @@ const Layout = ({ children }) => (
         {({ bannerImage, sponsors }) => (
             <div>
                 <Nav />
-                <Image image={bannerImage} style={{ width: '200px' }} />
+                <Image image={bannerImage} style={{ width: '900px' }} />
                 {children}
                 <Sponsors sponsors={sponsors} />
             </div>
