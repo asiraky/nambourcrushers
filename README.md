@@ -15,6 +15,8 @@ npm install
 npm run develop
 ```
 
+If the `npm install` has node-gyp errors, try `rm -rf node_modules package-lock.json` and try again.
+
 Run the NextJS Frontend
 
 ```bash
