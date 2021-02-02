@@ -14,7 +14,7 @@ const News = ({ newsPage, news }) => {
                 <h1>{newsPage.hero.title}</h1>
                 <div>
                     <h2>{news.name}</h2>
-                    <ReactMarkdown source={replaceImages(news.description)} escapeHtml={false} />
+                    <ReactMarkdown source={replaceImages(news.article.content)} escapeHtml={false} />
                 </div>
             </div>
         </Layout>
@@ -37,7 +37,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const [newsPage, news] = await Promise.all([
         fetchAPI("/news-page"),
-        fetchAPI(`/news?slug=${params.slug}`),
+        fetchAPI(`/stories?slug=${params.slug}`),
     ]);
 
     return {
