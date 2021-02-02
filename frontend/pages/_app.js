@@ -1,6 +1,8 @@
 import App from "next/app";
 import Head from "next/head";
 
+import '../sass/application.scss'
+
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
 import { GlobalContext } from "../components/GlobalContext";
