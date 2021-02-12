@@ -1,9 +1,9 @@
 import React from "react";
 
-import Layout from "../components/Layout";
-import Article from "../components/Article";
-import Seo from "../components/Seo";
-import { fetchAPI } from "../lib/api";
+import Layout from "../../components/Layout";
+import Article from "../../components/Article";
+import Seo from "../../components/Seo";
+import { fetchAPI } from "../../lib/api";
 
 const Events = ({ eventsPage, events }) => {
     return (
