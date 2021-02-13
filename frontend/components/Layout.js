@@ -13,7 +13,7 @@ const Layout = ({ children }) => (
                 <Hero image={bannerImage} />
 				<section className="main">
 					<div className="container">
-						<div className="row">
+						<div className="row stretch">
 							<div className="col-lg-8 col-sm-12">
 								{children}
 							</div>

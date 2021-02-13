@@ -14,10 +14,10 @@
 
 			@include background-image(logo, png, contain, center, no-repeat);
 			display: block;
-			height: 162px;
+			height: 120px;
 			margin-left: -63px;
 			@include position($position: absolute, $top: 10px, $left: 50%);
-			width: 126px;
+			width: 93px;
 			z-index: 9;
 
 			@include breakpoint(md) {

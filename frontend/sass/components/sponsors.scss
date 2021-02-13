@@ -1,7 +1,17 @@
 .sponsors {
 
+	position: sticky;
+	top: 100px;
+
 	@include breakpoint(sm) {
 		margin-top: 50px;
+		position: relative;
+		top: auto;
+	}
+
+	&-title {
+		color: lighten($color-text, 60%);
+		text-transform: uppercase;
 	}
 
 	&-list {

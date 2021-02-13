@@ -13,11 +13,7 @@ const News = ({ newsPage, news }) => {
 				<div className="col-lg-12">
 					<h1>{newsPage.hero.title}</h1>
 				</div>
-				<div className="col-lg-12">
-					<ul>
-					{news.map(n => <Article key={n.slug} article={n.article} link={`/news/${n.slug}`} />)}
-					</ul>
-				</div>
+				{news.map(item => <Article key={item.slug} item={item} link={`/news/${item.slug}`} />)}
 			</div>
         </Layout>
     );

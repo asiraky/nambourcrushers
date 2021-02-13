@@ -1,4 +1,8 @@
 .wrapper {
-	overflow-x: hidden;
-	width: 100%;
+
+	@include breakpoint(sm) {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
 }

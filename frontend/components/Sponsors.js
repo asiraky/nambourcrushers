@@ -4,8 +4,8 @@ import Image from "./Image"
 
 const Sponsors = ({ sponsors }) => {
     return (
-        <section className="sponsors">
-            These are our sponsors
+        <div className="sponsors">
+            <h5 className="sponsors-title">Our sponsors</h5>
             <div className="sponsors-list">
                 {sponsors.map(sponsor => (
 					<a href={sponsor.url} target="_blank" className="sponsors-list-item" key={sponsor.name}>
@@ -27,7 +27,7 @@ const Sponsors = ({ sponsors }) => {
 					</a>
                 ))}
             </div>
-        </section>
+        </div>
     );
 };
 
