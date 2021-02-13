@@ -14,10 +14,10 @@ const Layout = ({ children }) => (
 				<section className="main">
 					<div className="container">
 						<div className="row stretch">
-							<div className="col-lg-8 col-sm-12">
+							<div className="col-lg-8 col-md-12">
 								{children}
 							</div>
-							<div className="col-lg-4 col-sm-12">
+							<div className="col-lg-4 col-md-12">
 								<Sponsors sponsors={sponsors} />
 							</div>
 						</div>

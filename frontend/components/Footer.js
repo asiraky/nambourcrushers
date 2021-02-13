@@ -7,7 +7,7 @@ const Footer = ({ social, contact, credits }) => {
         <footer className="footer">
 			<div className="container">
 				<div className="row middle">
-					<div className="col-lg-6">
+					<div className="col-lg-6 col-sm-12">
 						<div className="footer-about">
 							<Link href="/">
 								<div className="footer-about-logo"></div>
@@ -42,7 +42,7 @@ const Footer = ({ social, contact, credits }) => {
 							</div>
 						</div>
 					</div>
-					<div className="col-lg-6">
+					<div className="col-lg-6 col-sm-12">
 						<div className="footer-contact">
 							<h3>
 								Contact

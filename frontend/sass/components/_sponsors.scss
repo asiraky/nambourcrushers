@@ -3,7 +3,7 @@
 	position: sticky;
 	top: 100px;
 
-	@include breakpoint(sm) {
+	@include breakpoint(md) {
 		margin-top: 50px;
 		position: relative;
 		top: auto;
