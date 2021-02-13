@@ -8,7 +8,7 @@ import { GlobalContext } from "../components/GlobalContext";
 const Layout = ({ children }) => (
     <GlobalContext.Consumer>
         {({ bannerImage, sponsors, social, footerContact, footerCredit }) => (
-            <div>
+            <div className="wrapper">
                 <Header />
                 <Hero image={bannerImage} />
                 {children}
