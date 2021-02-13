@@ -23,10 +23,10 @@
       "plugin": "upload",
       "required": false
     },
-    "description": {
-      "type": "text"
-    },
     "url": {
+      "type": "string"
+    },
+    "description": {
       "type": "string"
     }
   }

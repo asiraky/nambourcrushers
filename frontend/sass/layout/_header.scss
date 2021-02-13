@@ -164,7 +164,8 @@
 
 						@include link-color(#fff, #fff, none, none);
 						@include flex(flex, row, wrap, center, center);
-						font-size: 17px;
+						font-family: $font-family-2;
+						font-size: 18px;
 						font-weight: $font-weight-medium;
 						height: $header-height;
 						opacity: .5;

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const Header = ({ }) => {
 	const router = useRouter();
     return (
-        <div className="header">
+        <header className="header">
 			<div className="container">
 				<div className="header-content">
 					<div className="header-content-logo"></div>
@@ -38,7 +38,7 @@ const Header = ({ }) => {
 					</nav>
 				</div>
 			</div>
-        </div>
+        </header>
     );
 };
 

@@ -4,20 +4,30 @@ import Image from "./Image"
 
 const Sponsors = ({ sponsors }) => {
     return (
-        <div>
-            <div>These are our sponsors</div>
-            <ul>
+        <section className="sponsors">
+            These are our sponsors
+            <div className="sponsors-list">
                 {sponsors.map(sponsor => (
-                    <a href={sponsor.link} key={sponsor.name}>
-                        <li>
-                            <div>{sponsor.name}</div>
-                            <Image image={sponsor.image} style={{ width: '100px' }}/>
-                            <div>{sponsor.description}</div>
-                        </li>
-                    </a>
+					<a href={sponsor.url} target="_blank" className="sponsors-list-item" key={sponsor.name}>
+						<div className="row middle">
+							<div className="col-lg-6 col-xs-6">
+								<div className="sponsors-list-item-image">
+									<Image image={sponsor.image} />
+								</div>
+							</div>
+							<div className="col-lg-6 col-xs-6">
+								<div className="sponsors-list-item-name">
+									{sponsor.name}
+								</div>
+								<div className="sponsors-list-item-desc">
+									{sponsor.description}
+								</div>
+							</div>
+						</div>
+					</a>
                 ))}
-            </ul>
-        </div>
+            </div>
+        </section>
     );
 };
 

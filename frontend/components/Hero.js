@@ -3,8 +3,8 @@ import { getStrapiMedia } from "../lib/media";
 const Hero = ({ image, style }) => {
     const imageUrl = getStrapiMedia(image);
     return (
-		<div className="hero" style={{backgroundImage: "url(" + imageUrl + ")"}}>
-		</div>
+		<section className="hero" style={{backgroundImage: "url(" + imageUrl + ")"}}>
+		</section>
     );
 };
 

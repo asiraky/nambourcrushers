@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = ({ social, contact, credits }) => {
     return (
-        <div className="footer">
+        <footer className="footer">
 			<div className="container">
 				<div className="row middle">
 					<div className="col-lg-6">
@@ -69,7 +69,7 @@ const Footer = ({ social, contact, credits }) => {
 					</div>
 				</div>
 			</div>
-        </div>
+        </footer>
     );
 };
 

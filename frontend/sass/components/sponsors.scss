@@ -1,0 +1,39 @@
+.sponsors {
+
+	@include breakpoint(sm) {
+		margin-top: 50px;
+	}
+
+	&-list {
+
+		margin-top: 20px;
+
+		&-item {
+
+			background-color: #fff;
+			@include link-color($color-text, $color-text, none, none);
+			display: block;
+			margin-bottom: 20px;
+
+			&-image {
+
+				img {
+					display: block;
+				}
+
+			}
+
+			&-name {
+				font-size: $font-size;
+				font-weight: $font-weight-medium;
+			}
+
+			&-desc {
+				font-size: $font-size - 2;
+			}
+
+		}
+
+	}
+
+}

@@ -1,19 +1,21 @@
 // Font
-$font-family: 'Oswald', sans-serif;
-$font-size: 15px;
+$font-family-1: 'Roboto', sans-serif;
+$font-family-2: 'Oswald', sans-serif;
+$font-size: 16px;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
-$font-weight-bold: 600;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 $line-height: 1.5;
 
 // Colors
-$color-background: #fff;
+$color-background: #f4f4f4;
 $color-1: #3C6C42;
-$color-2: #E15B44;
+$color-2: #e15B44;
 $color-text: #222;
-$color-link-default: #29b9e3;
-$color-link-hover: #df4a1c;
+$color-link-default: $color-1;
+$color-link-hover: $color-2;
 $color-hr: #222;
 $color-line: #222;
 

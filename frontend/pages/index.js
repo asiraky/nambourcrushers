@@ -9,12 +9,16 @@ const News = ({ newsPage, news }) => {
     return (
         <Layout>
             <Seo seo={newsPage.seo} />
-            <div>
-                <h1>{newsPage.hero.title}</h1>
-                <ul>
-                    {news.map(n => <Article key={n.slug} article={n.article} link={`/news/${n.slug}`} />)}
-                </ul>
-            </div>
+			<div className="row">
+				<div className="col-lg-12">
+					<h1>{newsPage.hero.title}</h1>
+				</div>
+				<div className="col-lg-12">
+					<ul>
+					{news.map(n => <Article key={n.slug} article={n.article} link={`/news/${n.slug}`} />)}
+					</ul>
+				</div>
+			</div>
         </Layout>
     );
 };

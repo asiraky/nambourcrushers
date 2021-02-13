@@ -11,8 +11,18 @@ const Layout = ({ children }) => (
             <div className="wrapper">
                 <Header />
                 <Hero image={bannerImage} />
-                {children}
-                <Sponsors sponsors={sponsors} />
+				<section className="main">
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-8 col-sm-12">
+								{children}
+							</div>
+							<div className="col-lg-4 col-sm-12">
+								<Sponsors sponsors={sponsors} />
+							</div>
+						</div>
+					</div>
+				</section>
 				<Footer social={social} contact={footerContact} credits={footerCredit} />
             </div>
         )}
