@@ -15,7 +15,7 @@
 			@include background-image(logo, png, contain, center, no-repeat);
 			display: block;
 			height: 120px;
-			margin-left: -63px;
+			margin-left: -46px;
 			@include position($position: absolute, $top: 10px, $left: 50%);
 			width: 93px;
 			z-index: 9;
@@ -124,7 +124,7 @@
 
 				&.left {
 
-					margin-right: 100px;
+					margin-right: 80px;
 
 					@include breakpoint(md) {
 						margin-right: 0;
@@ -134,7 +134,7 @@
 
 				&.right {
 
-					margin-left: 100px;
+					margin-left: 80px;
 
 					@include breakpoint(md) {
 						margin-left: 0;
