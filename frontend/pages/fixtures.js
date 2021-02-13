@@ -9,11 +9,19 @@ const Fixtures = ({ fixturesPage, fixtures }) => {
     return (
         <Layout>
             <Seo seo={fixturesPage.seo} />
-            <div>
-                <h1>{fixturesPage.hero.title}</h1>
-                <ul>
-                    {fixtures.map(f => <Fixture key={f.round} fixture={f} />)}
-                </ul>
+			<div className="row">
+				<div className="col-lg-12">
+					<h1>
+						{fixturesPage.hero.title}
+					</h1>
+				</div>
+            </div>
+            <div className="row">
+				<div className="col-lg-12">
+					<ul>
+						{fixtures.map(f => <Fixture key={f.round} fixture={f} />)}
+					</ul>
+				</div>
             </div>
         </Layout>
     );

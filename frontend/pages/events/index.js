@@ -9,13 +9,13 @@ const Events = ({ eventsPage, events }) => {
     return (
         <Layout>
             <Seo seo={eventsPage.seo} />
-            <div>
+			<div className="row">
 				<div className="col-lg-12">
 					<h1>
 						{eventsPage.hero.title}
 					</h1>
 				</div>
-                {events.map(item => <Article key={item.slug} item={item} link={`/events/${item.slug}`} />).reverse()}
+				{events.map(item => <Article key={item.slug} item={item} link={`/events/${item.slug}`} />).reverse()}
             </div>
         </Layout>
     );

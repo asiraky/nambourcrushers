@@ -10,9 +10,17 @@ const History = ({ historyPage }) => {
     return (
         <Layout>
             <Seo seo={historyPage.seo} />
-            <div>
-                <h1>{historyPage.hero.title}</h1>
-                <ReactMarkdown source={replaceImages(historyPage.content)} escapeHtml={false} />
+			<div className="row">
+				<div className="col-lg-12">
+					<h1>
+						{historyPage.hero.title}
+					</h1>
+				</div>
+            </div>
+            <div className="row">
+				<div className="col-lg-12">
+					<ReactMarkdown source={replaceImages(historyPage.content)} escapeHtml={false} />
+				</div>
             </div>
         </Layout>
     );

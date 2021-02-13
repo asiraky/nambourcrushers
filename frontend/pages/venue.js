@@ -10,9 +10,17 @@ const Venue = ({ venuePage }) => {
     return (
         <Layout>
             <Seo seo={venuePage.seo} />
-            <div>
-                <h1>{venuePage.hero.title}</h1>
-                <ReactMarkdown source={replaceImages(venuePage.content)} escapeHtml={false} />
+            <div className="row">
+				<div className="col-lg-12">
+					<h1>
+						{venuePage.hero.title}
+					</h1>
+				</div>
+            </div>
+            <div className="row">
+				<div className="col-lg-12">
+					<ReactMarkdown source={replaceImages(venuePage.content)} escapeHtml={false} />
+				</div>
             </div>
         </Layout>
     );

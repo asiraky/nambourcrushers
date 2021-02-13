@@ -5,16 +5,29 @@ import Layout from "../../components/Layout";
 import Seo from "../../components/Seo";
 import { fetchAPI } from "../../lib/api";
 import { replaceImages } from "../../lib/replaceImages";
+import { getStrapiMedia } from "../../lib/media";
 
 const News = ({ newsPage, news }) => {
+	const imageUrl = getStrapiMedia(news.article.image);
     return (
         <Layout>
             <Seo seo={newsPage.seo} />
-            <div>
-                <h1>{news.name}</h1>
-                <div>
-                    <ReactMarkdown source={replaceImages(news.article.content)} escapeHtml={false} />
-                </div>
+			<div className="row">
+				<div className="col-lg-12">
+					<h1>
+						{news.article.title}
+					</h1>
+				</div>
+            </div>
+			<div className="row">
+				<div className="col-lg-12">
+					<img src={imageUrl} className="news-article-image" />
+				</div>
+            </div>
+            <div className="row">
+				<div className="col-lg-12">
+					<ReactMarkdown source={replaceImages(news.article.content)} escapeHtml={false} />
+				</div>
             </div>
         </Layout>
     );

@@ -10,7 +10,7 @@
 		transition: box-shadow .3s ease;
 
 		&:hover {
-			box-shadow: 0 3px 9px rgba(0,0,0,.1);
+			box-shadow: 0 4px 8px rgba(0,0,0,.1);
 		}
 
 		&-content {
@@ -32,6 +32,15 @@
 				margin-bottom: 10px;
 			}
 
+		}
+
+	}
+
+	&-article {
+
+		&-image {
+			display: block;
+			width: 100%;
 		}
 
 	}

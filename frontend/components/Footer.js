@@ -48,13 +48,19 @@ const Footer = ({ social, contact, credits }) => {
 								Contact
 							</h3>
 							{contact.email &&
-								<div>Email: <a href={`mailto:${contact.email}`}>{contact.email}</a></div>
+								<div>
+									Email: <a href={`mailto:${contact.email}`} className="medium">{contact.email}</a>
+								</div>
 							}
 							{contact.phone &&
-								<div>Phone: <a href={`tel:${contact.phone}`}>{contact.phone}</a></div>
+								<div>
+									Phone: <a href={`tel:${contact.phone}`} className="medium">{contact.phone}</a>
+								</div>
 							}
 							{contact.address &&
-								<div>Address: {contact.address}</div>
+								<div>
+									Address: <span className="medium">{contact.address}</span>
+								</div>
 							}
 						</div>
 					</div>

@@ -10,12 +10,17 @@ const Event = ({ eventsPage, event }) => {
     return (
         <Layout>
             <Seo seo={eventsPage.seo} />
-            <div>
-                <h1>{eventsPage.hero.title}</h1>
-                <div>
-                    <h2>{event.article.title}</h2>
-                    <ReactMarkdown source={replaceImages(event.article.content)} escapeHtml={false} />
-                </div>
+			<div className="row">
+				<div className="col-lg-12">
+					<h1>
+						{event.article.title}
+					</h1>
+				</div>
+            </div>
+            <div className="row">
+				<div className="col-lg-12">
+					<ReactMarkdown source={replaceImages(event.article.content)} escapeHtml={false} />
+				</div>
             </div>
         </Layout>
     );

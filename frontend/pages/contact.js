@@ -10,9 +10,17 @@ const Contact = ({ contactPage }) => {
     return (
         <Layout>
             <Seo seo={contactPage.seo} />
-            <div>
-                <h1>{contactPage.hero.title}</h1>
-                <ReactMarkdown source={replaceImages(contactPage.content)} escapeHtml={false} />
+			<div className="row">
+				<div className="col-lg-12">
+					<h1>
+						{contactPage.hero.title}
+					</h1>
+				</div>
+            </div>
+            <div className="row">
+				<div className="col-lg-12">
+					<ReactMarkdown source={replaceImages(contactPage.content)} escapeHtml={false} />
+				</div>
             </div>
         </Layout>
     );
