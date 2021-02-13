@@ -28,7 +28,6 @@ const Event = ({ eventsPage, event }) => {
 
 export async function getStaticPaths() {
     const events = await fetchAPI("/events");
-
     return {
         paths: events.map(event => ({
             params: {
@@ -44,7 +43,6 @@ export async function getStaticProps({ params }) {
         fetchAPI("/events-page"),
         fetchAPI(`/events?slug=${params.slug}`),
     ]);
-
     return {
         props: { eventsPage, event: events[0] },
         revalidate: 1,

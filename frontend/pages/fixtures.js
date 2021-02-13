@@ -32,7 +32,6 @@ export async function getStaticProps() {
         fetchAPI("/fixtures-page"),
         fetchAPI("/fixtures?_sort=round:ASC"),
     ]);
-
     return {
         props: { fixturesPage, fixtures },
         revalidate: 1,

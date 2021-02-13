@@ -30,7 +30,6 @@ export async function getStaticProps() {
     const [venuePage] = await Promise.all([
         fetchAPI("/venue-page"),
     ]);
-
     return {
         props: { venuePage },
         revalidate: 1,

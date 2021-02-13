@@ -30,7 +30,6 @@ export async function getStaticProps() {
     const [historyPage] = await Promise.all([
         fetchAPI("/history-page"),
     ]);
-
     return {
         props: { historyPage },
         revalidate: 1,

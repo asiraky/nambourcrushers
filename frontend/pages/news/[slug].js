@@ -35,7 +35,6 @@ const News = ({ newsPage, news }) => {
 
 export async function getStaticPaths() {
     const news = await fetchAPI("/stories");
-
     return {
         paths: news.map(noos => ({
             params: {
@@ -51,7 +50,6 @@ export async function getStaticProps({ params }) {
         fetchAPI("/news-page"),
         fetchAPI(`/stories?slug=${params.slug}`),
     ]);
-
     return {
         props: { newsPage, news: news[0] },
         revalidate: 1,

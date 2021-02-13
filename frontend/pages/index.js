@@ -26,7 +26,6 @@ export async function getStaticProps() {
         fetchAPI("/news-page"),
         fetchAPI("/stories"),
     ]);
-
     return {
         props: { newsPage, news },
         revalidate: 1,
