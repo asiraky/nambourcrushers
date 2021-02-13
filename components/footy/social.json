@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_footy_socials",
+  "info": {
+    "name": "Social",
+    "icon": "keyboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    }
+  }
+}

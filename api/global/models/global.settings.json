@@ -47,6 +47,19 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.sponsors"
+    },
+    "social": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footy.social"
+    },
+    "footerCredit": {
+      "type": "string"
+    },
+    "footerContact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footy.footer-contact"
     }
   }
 }

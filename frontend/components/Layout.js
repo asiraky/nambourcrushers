@@ -7,13 +7,13 @@ import { GlobalContext } from "../components/GlobalContext";
 
 const Layout = ({ children }) => (
     <GlobalContext.Consumer>
-        {({ bannerImage, sponsors }) => (
+        {({ bannerImage, sponsors, social, footerContact, footerCredit }) => (
             <div>
                 <Header />
                 <Hero image={bannerImage} />
                 {children}
                 <Sponsors sponsors={sponsors} />
-				<Footer />
+				<Footer social={social} contact={footerContact} credits={footerCredit} />
             </div>
         )}
     </GlobalContext.Consumer>

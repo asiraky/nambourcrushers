@@ -1,7 +1,8 @@
 import React from "react";
+
 import Link from "next/link";
 
-const Footer = ({ }) => {
+const Footer = ({ social, contact, credits }) => {
     return (
         <div className="footer">
 			<div className="container">
@@ -9,28 +10,34 @@ const Footer = ({ }) => {
 					<div className="col-lg-6">
 						<div className="footer-about">
 							<Link href="/">
-								<a className="footer-about-logo"></a>
+								<div className="footer-about-logo"></div>
 							</Link>
 							<div className="footer-about-content">
 								<h3>
 									Follow us
 								</h3>
 								<ul className="footer-about-content-social">
+									{social.facebook &&
 									<li>
 										<Link href="/">
-											<a className="footer-about-social-icon facebook"></a>
+											<a href={social.facebook} className="footer-about-social-icon facebook" target="_blank"></a>
 										</Link>
 									</li>
+									}
+									{social.twitter &&
 									<li>
 										<Link href="/">
-											<a className="footer-about-social-icon twitter"></a>
+											<a href={social.twitter} className="footer-about-social-icon twitter" target="_blank"></a>
 										</Link>
 									</li>
+									}
+									{social.instagram &&
 									<li>
 										<Link href="/">
-											<a className="footer-about-social-icon instagram"></a>
+											<a href={social.instagram} className="footer-about-social-icon instagram" target="_blank"></a>
 										</Link>
 									</li>
+									}
 								</ul>
 							</div>
 						</div>
@@ -41,9 +48,15 @@ const Footer = ({ }) => {
 								Contact
 							</h3>
 							<p>
-								E-mail: <a href="mailto:wendy@googlemail.com">wendy@googlemail.com</a><br />
-								Phone: <a href="0414123456">0414123456</a><br />
-								Address: Gregory Street, Golden Beach 4551
+								{contact.email &&
+									<div>Email: <a href={`mailto:${contact.email}`}>{contact.email}</a></div>
+								}
+								{contact.phone &&
+									<div>Phone: <a href={`tel:${contact.phone}`}>{contact.phone}</a></div>
+								}
+								{contact.address &&
+									<div>Address: {contact.address}</div>
+								}
 							</p>
 						</div>
 					</div>
@@ -52,7 +65,7 @@ const Footer = ({ }) => {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="footer-credits">
-								© 2021 - Nambour Crushers - Rugby League Sunshine Coast
+								© {new Date().getFullYear()} - {credits}
 							</div>
 						</div>
 					</div>
