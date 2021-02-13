@@ -10,10 +10,12 @@ const Events = ({ eventsPage, events }) => {
         <Layout>
             <Seo seo={eventsPage.seo} />
             <div>
-                <h1>{eventsPage.hero.title}</h1>
-                <ul>
-                    {events.map(e => <Article key={e.slug} article={e.article} link={`/events/${e.slug}`} />)}
-                </ul>
+				<div className="col-lg-12">
+					<h1>
+						{eventsPage.hero.title}
+					</h1>
+				</div>
+                {events.map(item => <Article key={item.slug} item={item} link={`/events/${item.slug}`} />).reverse()}
             </div>
         </Layout>
     );

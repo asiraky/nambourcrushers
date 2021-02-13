@@ -11,7 +11,9 @@ const News = ({ newsPage, news }) => {
             <Seo seo={newsPage.seo} />
 			<div className="row">
 				<div className="col-lg-12">
-					<h1>{newsPage.hero.title}</h1>
+					<h1>
+						{newsPage.hero.title}
+					</h1>
 				</div>
 				{news.map(item => <Article key={item.slug} item={item} link={`/news/${item.slug}`} />).reverse()}
 			</div>

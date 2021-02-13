@@ -11,9 +11,8 @@ const News = ({ newsPage, news }) => {
         <Layout>
             <Seo seo={newsPage.seo} />
             <div>
-                <h1>{newsPage.hero.title}</h1>
+                <h1>{news.name}</h1>
                 <div>
-                    <h2>{news.name}</h2>
                     <ReactMarkdown source={replaceImages(news.article.content)} escapeHtml={false} />
                 </div>
             </div>

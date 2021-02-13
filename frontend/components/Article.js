@@ -1,5 +1,4 @@
 import Link from "next/link"
-
 import BackgroundImage from "./BackgroundImage";
 
 const Article = ({ item, link }) => {
@@ -9,7 +8,7 @@ const Article = ({ item, link }) => {
 				<a href={link} className="news-item">
 					<div className="row stretch">
 						<div className="col-lg-4">
-							{item.article.image && <BackgroundImage image={item.article.image} />}
+							{item.article.image && <BackgroundImage image={item.article.image} size="180" />}
 						</div>
 						<div className="col-lg-8">
 							<div className="news-item-content">
@@ -19,9 +18,11 @@ const Article = ({ item, link }) => {
 								<h4 className="news-item-content-title">
 									{item.article.title}
 								</h4>
+								{item.article.description &&
 								<div className="news-item-content-text">
 									{item.article.description}
 								</div>
+								}
 							</div>
 						</div>
 					</div>
