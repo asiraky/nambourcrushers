@@ -169,6 +169,7 @@
 						height: $header-height;
 						opacity: .5;
 						text-transform: uppercase;
+						user-select: none;
 
 						@include breakpoint(md) {
 							display: block;
