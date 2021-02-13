@@ -6,7 +6,7 @@ const Article = ({ item, link }) => {
     return (
 		<div className="col-lg-12">
 			<Link href={link}>
-				<div className="news-item">
+				<a href={link} className="news-item">
 					<div className="row stretch">
 						<div className="col-lg-4">
 							{item.article.image && <BackgroundImage image={item.article.image} />}
@@ -25,7 +25,7 @@ const Article = ({ item, link }) => {
 							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</Link>
 		</div>
     );
