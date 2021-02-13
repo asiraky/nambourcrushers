@@ -13,7 +13,7 @@ const Sponsors = ({ sponsors }) => {
 					<a href={sponsor.url} target="_blank" className="sponsors-list-item" key={sponsor.name}>
 						<div className="row middle">
 							<div className="col-lg-6 col-xs-6">
-								{sponsor.image && <BackgroundImage image={sponsor.image} size="90" />}
+								{sponsor.image && <BackgroundImage image={sponsor.image} size="100" />}
 							</div>
 							<div className="col-lg-6 col-xs-6">
 								<div className="sponsors-list-item-name">
