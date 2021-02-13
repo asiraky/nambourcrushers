@@ -1,6 +1,6 @@
 .header {
 
-	background-color: $color-1;
+	background-color: $color-bg;
 	@include position($position: fixed, $top: 0, $left: 0);
 	width: 100%;
 	z-index: 10;
@@ -98,7 +98,7 @@
 
 			@include breakpoint(md) {
 
-				background-color: $color-1;
+				background-color: $color-bg;
 				@include flex(flex, column, wrap, center, center);
 				height: calc(100vh - #{$header-height});
 				@include position($position: fixed, $top: $header-height, $left: 100%);

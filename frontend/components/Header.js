@@ -25,14 +25,14 @@ const Header = ({ }) => {
 							</li>
 						</ul>
 						<ul className="header-content-nav-list right">
-							<li className={router.pathname == "/contact" ? "active" : ""}>
-								<Link href="/contact">Contact</Link>
-							</li>
 							<li className={router.pathname == "/venue" ? "active" : ""}>
 								<Link href="/venue">Venue</Link>
 							</li>
 							<li className={router.pathname == "/history" ? "active" : ""}>
 				            	<Link href="/history">History</Link>
+							</li>
+							<li className={router.pathname == "/contact" ? "active" : ""}>
+								<Link href="/contact">Contact</Link>
 							</li>
 						</ul>
 					</nav>
