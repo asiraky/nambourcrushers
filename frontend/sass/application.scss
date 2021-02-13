@@ -1,1 +1,17 @@
-@import 'application/foo';
+@import
+'abstracts/variables',
+'abstracts/mixins',
+
+'global/normalize',
+'global/base',
+'global/helpers',
+
+'layout/wrapper',
+'layout/grid',
+'layout/header',
+'layout/main',
+'layout/footer',
+
+'components/hero',
+
+'pages/home';

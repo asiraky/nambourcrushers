@@ -1,0 +1,107 @@
+.footer {
+
+	background-color: $color-1;
+	color: #fff;
+	padding: 50px 0 30px;
+	position: relative;
+
+	h3 {
+		display: block;
+		margin-top: 0;
+		text-transform: uppercase;
+	}
+
+	&-about {
+
+		@include flex(flex, row, wrap, flex-start, center);
+
+		@include breakpoint(sm) {
+			display: block;
+			text-align: center;
+		}
+
+		&-logo {
+
+			@include background-image(logo, png, contain, center, no-repeat);
+			display: inline-block;
+			height: 120px;
+			margin-right: 30px;
+			width: 93px;
+
+			@include breakpoint(sm) {
+				height: 150px;
+				margin-bottom: 20px;
+				margin-right: 0;
+				width: 116px;
+			}
+
+		}
+
+		&-content {
+
+			&-social {
+
+				@include flex(flex, row, wrap, flex-start, center);
+				@include list-reset;
+
+				@include breakpoint(sm) {
+					@include flex(flex, row, wrap, center, center);
+				}
+
+				li {
+
+					&:not(:last-child) {
+						margin-right: 10px;
+					}
+
+					a {
+
+						display: block;
+						height: 24px;
+						width: 24px;
+
+						&.facebook {
+							@include background-image(facebook, svg, contain, center, no-repeat);
+						}
+
+						&.twitter {
+							@include background-image(twitter, svg, contain, center, no-repeat);
+						}
+
+						&.instagram {
+							@include background-image(instagram, svg, contain, center, no-repeat);
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&-contact {
+
+		text-align: right;
+
+		@include breakpoint(sm) {
+			line-height: 1.8;
+			margin-top: 60px;
+			text-align: center;
+		}
+
+		a {
+			@include link-color(#fff, #fff, none, underline);
+		}
+
+	}
+
+	&-credits {
+		font-size: $font-size - 1;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+}
