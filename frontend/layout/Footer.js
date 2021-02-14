@@ -1,7 +1,5 @@
 import React from "react";
 
-import Link from "next/link";
-
 const Footer = ({ social, contact, credits }) => {
     return (
         <footer className="footer">
@@ -9,9 +7,7 @@ const Footer = ({ social, contact, credits }) => {
 				<div className="row middle">
 					<div className="col-lg-6 col-sm-12">
 						<div className="footer-about">
-							<Link href="/">
-								<div className="footer-about-logo"></div>
-							</Link>
+							<div className="footer-about-logo"></div>
 							<div className="footer-about-content">
 								<h3>
 									Follow us
@@ -19,23 +15,17 @@ const Footer = ({ social, contact, credits }) => {
 								<ul className="footer-about-content-social">
 									{social.facebook &&
 									<li>
-										<Link href="/">
-											<a href={social.facebook} className="footer-about-social-icon facebook" target="_blank"></a>
-										</Link>
+										<a href={social.facebook} className="footer-about-social-icon facebook" target="_blank"></a>
 									</li>
 									}
 									{social.twitter &&
 									<li>
-										<Link href="/">
-											<a href={social.twitter} className="footer-about-social-icon twitter" target="_blank"></a>
-										</Link>
+										<a href={social.twitter} className="footer-about-social-icon twitter" target="_blank"></a>
 									</li>
 									}
 									{social.instagram &&
 									<li>
-										<Link href="/">
-											<a href={social.instagram} className="footer-about-social-icon instagram" target="_blank"></a>
-										</Link>
+										<a href={social.instagram} className="footer-about-social-icon instagram" target="_blank"></a>
 									</li>
 									}
 								</ul>

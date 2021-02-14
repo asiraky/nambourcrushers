@@ -3,14 +3,16 @@
 	&-item {
 
 		background-color: #fff;
+		border-radius: 4px;
 		@include link-color($color-text, $color-text, none, none);
 		cursor: pointer;
 		display: block;
 		margin-bottom: 30px;
+		overflow: hidden;
 		transition: box-shadow .3s ease;
 
 		&:hover {
-			box-shadow: 0 4px 8px rgba(0,0,0,.1);
+			box-shadow: 0 0 20px rgba(0,0,0,.06);
 		}
 
 		&-content {
@@ -40,6 +42,7 @@
 
 		&-image {
 			display: block;
+			margin-bottom: 30px;
 			width: 100%;
 		}
 
