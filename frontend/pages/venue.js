@@ -45,13 +45,13 @@ const Venue = ({ venuePage }) => {
     );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const [venuePage] = await Promise.all([
         fetchAPI("/venue-page"),
     ]);
     return {
         props: { venuePage },
-        revalidate: 1,
+        //revalidate: 1,
     };
 }
 

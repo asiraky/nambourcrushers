@@ -60,26 +60,26 @@ const Event = ({ eventsPage, event }) => {
     );
 };
 
-export async function getStaticPaths() {
-    const events = await fetchAPI("/events");
-    return {
-        paths: events.map(event => ({
-            params: {
-                slug: event.slug,
-            },
-        })),
-        fallback: false,
-    };
-}
+// export async function getStaticPaths() {
+//     const events = await fetchAPI("/events");
+//     return {
+//         paths: events.map(event => ({
+//             params: {
+//                 slug: event.slug,
+//             },
+//         })),
+//         fallback: false,
+//     };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     const [eventsPage, events] = await Promise.all([
         fetchAPI("/events-page"),
         fetchAPI(`/events?slug=${params.slug}`),
     ]);
     return {
         props: { eventsPage, event: events[0] },
-        revalidate: 1,
+        //revalidate: 1,
     };
 }
 

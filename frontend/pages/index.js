@@ -53,14 +53,14 @@ const News = ({ newsPage, news }) => {
     );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const [newsPage, news] = await Promise.all([
         fetchAPI("/news-page"),
         fetchAPI("/stories"),
     ]);
     return {
         props: { newsPage, news },
-        revalidate: 1,
+        //revalidate: 1,
     };
 }
 

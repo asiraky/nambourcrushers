@@ -45,13 +45,13 @@ const History = ({ historyPage }) => {
     );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const [historyPage] = await Promise.all([
         fetchAPI("/history-page"),
     ]);
     return {
         props: { historyPage },
-        revalidate: 1,
+        //revalidate: 1,
     };
 }
 

@@ -45,13 +45,13 @@ const Contact = ({ contactPage }) => {
     );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const [contactPage] = await Promise.all([
         fetchAPI("/contact-page"),
     ]);
     return {
         props: { contactPage },
-        revalidate: 1,
+        //revalidate: 1,
     };
 }
 

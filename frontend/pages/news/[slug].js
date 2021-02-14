@@ -61,19 +61,19 @@ const News = ({ newsPage, news }) => {
     );
 };
 
-export async function getStaticPaths() {
-    const news = await fetchAPI("/stories");
-    return {
-        paths: news.map(noos => ({
-            params: {
-                slug: noos.slug,
-            },
-        })),
-        fallback: false,
-    };
-}
+// export async function getStaticPaths() {
+//     const news = await fetchAPI("/stories");
+//     return {
+//         paths: news.map(noos => ({
+//             params: {
+//                 slug: noos.slug,
+//             },
+//         })),
+//         fallback: false,
+//     };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     const [newsPage, news] = await Promise.all([
         fetchAPI("/news-page"),
         fetchAPI(`/stories?slug=${params.slug}`),

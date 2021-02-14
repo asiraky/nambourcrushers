@@ -64,14 +64,14 @@ const Fixtures = ({ fixturesPage, fixtures }) => {
     );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const [fixturesPage, fixtures] = await Promise.all([
         fetchAPI("/fixtures-page"),
         fetchAPI("/fixtures?_sort=round:ASC"),
     ]);
     return {
         props: { fixturesPage, fixtures },
-        revalidate: 1,
+        //revalidate: 1,
     };
 }
 
