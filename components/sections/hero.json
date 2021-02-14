@@ -20,6 +20,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "text": {
+      "type": "string"
     }
   }
 }

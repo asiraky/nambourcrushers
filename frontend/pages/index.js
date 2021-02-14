@@ -17,7 +17,17 @@ const News = ({ newsPage, news }) => {
 			{({ sponsors }) => (
 		        <Layout>
 		            <Seo seo={newsPage.seo} />
-					<section className="hero" style={{backgroundImage: "url(" + image + ")"}}></section>
+					<section className="hero" style={{backgroundImage: "url(" + image + ")"}}>
+						<div className="hero-content">
+							<div className="container">
+								<div className="row">
+									<div className="col-lg-12">
+										{newsPage.hero.text}
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					<section className="main">
 						<div className="container">
 							<div className="row stretch">
