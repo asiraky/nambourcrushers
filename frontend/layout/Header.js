@@ -3,16 +3,21 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Header = ({ }) => {
-	const router = useRouter();
+	const router = useRouter()
+	const [state, setState] = React.useState(false)
+	function toggleMenu(e) {
+	    e.preventDefault()
+	    setState(!state)
+	}
     return (
         <header className="header">
 			<div className="container">
 				<div className="header-content">
 					<div className="header-content-logo"></div>
-					<div className="header-content-hamburger">
+					<div onClick={toggleMenu} className="header-content-hamburger">
 						<span></span>
 					</div>
-					<nav className="header-content-nav">
+					<nav className={`header-content-nav ${state ? 'active' : ''}`}>
 						<ul className="header-content-nav-list left">
 							<li className={router.pathname == "/" ? "active" : ""}>
 								<Link href="/">News</Link>

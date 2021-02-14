@@ -29,9 +29,6 @@
       "required": true,
       "default": "Home"
     },
-    "opposition": {
-      "type": "string"
-    },
     "division": {
       "type": "component",
       "repeatable": true,

@@ -32,17 +32,6 @@
       "component": "shared.seo",
       "required": true
     },
-    "bannerImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "sponsors": {
       "type": "component",
       "repeatable": true,

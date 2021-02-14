@@ -2,7 +2,8 @@
   "collectionName": "components_footy_divisions",
   "info": {
     "name": "Division",
-    "icon": "american-sign-language-interpreting"
+    "icon": "american-sign-language-interpreting",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -25,6 +26,9 @@
         "Win",
         "Loss"
       ]
+    },
+    "opposition": {
+      "type": "string"
     }
   }
 }

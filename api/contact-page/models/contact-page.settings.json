@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "contact_pages",
   "info": {
-    "name": "Contact Page"
+    "name": "Contact Page",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,13 +16,13 @@
       "repeatable": false,
       "component": "shared.seo"
     },
-    "hero": {
-      "type": "component",
-      "repeatable": false,
-      "component": "sections.hero"
-    },
     "content": {
       "type": "richtext"
+    },
+    "page": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.page"
     }
   }
 }

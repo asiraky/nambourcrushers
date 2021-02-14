@@ -4,13 +4,13 @@ const Fixture = ({ fixture }) => {
             <span>{fixture.round}</span>
             <span>{fixture.date}</span>
             <span>{fixture.location}</span>
-            <span>{fixture.oppostion}</span>
             <ul>
                 {fixture.division.map(d => (
-                    <li>
+                    <li key={d.divisionName}>
                         <span>{d.divisionName}</span>
                         <span>{d.score}</span>
                         <span>{d.result}</span>
+						<span>{d.opposition}</span>
                     </li>
                 ))}
             </ul>
