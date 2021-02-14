@@ -1,3 +1,50 @@
 .fixtures {
-	
+
+	&-table {
+
+		border-collapse: collapse;
+		font-size: $font-size - 1;
+  		width: 100%;
+
+		tr {
+			background-color: #fff;
+			transition: all .2s ease;
+		}
+
+		td, th {
+			border: 1px solid #ccc;
+		}
+
+		th {
+			background-color: $color-bg;
+			color: #fff;
+			font-family: $font-family-2;
+			font-size: $font-size - 2;
+			font-weight: $font-weight-medium;
+			padding: 10px 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&-row {
+
+			@include flex(flex, row, wrap, flex-start, flex-start);
+			padding: 10px;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid #ccc;
+			}
+
+			&.won {
+				background-color: #e1f8e1;
+			}
+
+			&.lost {
+				background-color: #faebec;
+			}
+
+		}
+
+	}
+
 }

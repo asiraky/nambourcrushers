@@ -1,20 +1,31 @@
 const Fixture = ({ fixture }) => {
     return (
-        <li>
-            <span>{fixture.round}</span>
-            <span>{fixture.date}</span>
-            <span>{fixture.location}</span>
-            <ul>
-                {fixture.division.map(d => (
-                    <li key={d.divisionName}>
-                        <span>{d.divisionName}</span>
-                        <span>{d.score}</span>
-                        <span>{d.result}</span>
-						<span>{d.opposition}</span>
-                    </li>
-                ))}
-            </ul>
-        </li>
+		<tr>
+			<td align="center">
+				{fixture.round}
+			</td>
+			<td align="center">
+				{fixture.date}
+			</td>
+			<td align="center">
+				{fixture.location}
+			</td>
+			<td>
+				{fixture.division.map(d => (
+					<div key={d.divisionName} className={`fixtures-table-row ${d.result === 'Win' ? 'won' : ''} ${d.result === 'Loss' ? 'lost' : ''} `}>
+						<div style={{width: "30%"}}>
+							{d.divisionName}
+						</div>
+						<div style={{width: "20%"}}>
+							<strong>{d.score}</strong>
+						</div>
+						<div style={{width: "50%"}}>
+							{d.opposition}
+						</div>
+					</div>
+				))}
+			</td>
+		</tr>
     );
 };
 

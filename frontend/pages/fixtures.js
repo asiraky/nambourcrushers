@@ -28,9 +28,27 @@ const Fixtures = ({ fixturesPage, fixtures }) => {
 									</div>
 									<div className="row">
 										<div className="col-lg-12">
-											<ul>
-												{fixtures.map(f => <Fixture key={f.round} fixture={f} />)}
-											</ul>
+											<table className="fixtures-table">
+												<thead>
+													<tr>
+														<th width="10%">
+															Round
+														</th>
+														<th width="15%">
+															Date
+														</th>
+														<th width="15%">
+															Location
+														</th>
+														<th width="60%">
+															Results
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													{fixtures.map(f => <Fixture key={f.round} fixture={f} />)}
+												</tbody>
+											</table>
 										</div>
 						            </div>
 								</div>
