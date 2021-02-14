@@ -15,7 +15,6 @@ import { replaceImages } from "../../lib/replaceImages";
 import { getStrapiMedia } from "../../lib/media";
 
 const News = ({ newsPage, news }) => {
-	const imageUrl = getStrapiMedia(news.article.image);
     return (
 		<GlobalContext.Consumer>
 			{({ sponsors }) => (
@@ -34,7 +33,7 @@ const News = ({ newsPage, news }) => {
 									</div>
 									<div className="row">
 										<div className="col-lg-12">
-											<img src={imageUrl} className="news-article-image" />
+											<img src={getStrapiMedia(news.article.image)} className="news-article-image" />
 										</div>
 						            </div>
 									<div className="row">

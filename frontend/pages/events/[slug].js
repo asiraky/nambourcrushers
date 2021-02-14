@@ -11,6 +11,7 @@ import Sponsors from "../../components/Sponsors";
 import { GlobalContext } from "../../layout/GlobalContext";
 import { fetchAPI } from "../../lib/api";
 import { replaceImages } from "../../lib/replaceImages";
+import { getStrapiMedia } from "../../lib/media";
 
 const Event = ({ eventsPage, event }) => {
     return (
@@ -29,6 +30,11 @@ const Event = ({ eventsPage, event }) => {
 											</h1>
 										</div>
 									</div>
+									<div className="row">
+										<div className="col-lg-12">
+											<img src={getStrapiMedia(event.article.image)} className="news-article-image" />
+										</div>
+						            </div>
 									<div className="row">
 										<div className="col-lg-12">
 											<ReactMarkdown source={replaceImages(event.article.content)} escapeHtml={false} />
