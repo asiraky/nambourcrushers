@@ -11,5 +11,5 @@ module.exports = {
             script: 'yarn',
             args: 'start',
         }
-    ],
+    ]
 }
