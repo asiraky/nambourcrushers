@@ -67,7 +67,7 @@ const Fixtures = ({ fixturesPage, fixtures }) => {
 export async function getServerSideProps() {
     const [fixturesPage, fixtures] = await Promise.all([
         fetchAPI("/fixtures-page"),
-        fetchAPI("/fixtures?_sort=round:ASC"),
+        fetchAPI("/fixtures?_sort=round:ASC&date_lte=2021-02-14"),
     ]);
     return {
         props: { fixturesPage, fixtures },

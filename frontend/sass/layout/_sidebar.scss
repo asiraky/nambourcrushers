@@ -1,0 +1,122 @@
+.sidebar {
+
+	position: sticky;
+	top: 100px;
+
+	@include breakpoint(md) {
+		margin-top: 50px;
+		position: relative;
+		top: auto;
+	}
+
+	&-title {
+		color: lighten($color-text, 66%);
+		margin-bottom: 24px;
+		text-transform: uppercase;
+	}
+
+	&-fixtures {
+
+		&-item {
+
+			background-color: #fff;
+			border-radius: 4px;
+			@include link-color($color-text, $color-text, none, none);
+			margin-bottom: 20px;
+			padding: 20px 0;
+			text-align: center;
+			transition: box-shadow .3s ease;
+
+			&:hover {
+				box-shadow: 0 0 20px rgba(0,0,0,.06);
+			}
+
+			&-date {
+				font-weight: $font-weight-medium;
+				margin-bottom: 15px;
+			}
+
+			&-match {
+
+				@include flex(flex, row, wrap, center, stretch);
+
+				&-cell {
+
+					@include flex(flex, row, wrap, center, center);
+					font-size: 13px;
+					width: 35%;
+
+					&.middle {
+						font-size: 20px;
+						font-weight: $font-weight-medium;
+						width: 10%;
+					}
+
+					&-team {
+
+						display: inline-block;
+						height: 90px;
+						margin-bottom: 5px;
+						width: 90px;
+
+						&.crushers {
+							@include background-image(logo, png, contain, center, no-repeat);
+						}
+
+						&.guest {
+							@include background-image(shield, svg, contain, center, no-repeat);
+						}
+
+						&-name {
+							width: 100%;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&-sponsors {
+
+		margin-top: 20px;
+
+		&-item {
+
+			background-color: #fff;
+			border-radius: 4px;
+			@include link-color($color-text, $color-text, none, none);
+			display: block;
+			margin-bottom: 20px;
+			overflow: hidden;
+			transition: box-shadow .3s ease;
+
+			&:hover {
+				box-shadow: 0 0 20px rgba(0,0,0,.06);
+			}
+
+			&-name {
+				font-size: $font-size;
+				font-weight: $font-weight-medium;
+			}
+
+			&-desc {
+
+				font-size: $font-size - 2;
+				padding-right: 30px;
+
+				@include breakpoint(sm) {
+					padding-right: 15px;
+				}
+
+			}
+
+		}
+
+	}
+
+}

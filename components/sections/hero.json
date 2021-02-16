@@ -10,6 +10,9 @@
     "title": {
       "type": "string"
     },
+    "text": {
+      "type": "string"
+    },
     "image": {
       "collection": "file",
       "via": "related",
@@ -20,9 +23,6 @@
       ],
       "plugin": "upload",
       "required": false
-    },
-    "text": {
-      "type": "string"
     }
   }
 }

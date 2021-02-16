@@ -4,7 +4,7 @@ import { GlobalContext } from "./GlobalContext";
 
 const Layout = ({ children }) => (
     <GlobalContext.Consumer>
-        {({ sponsors, social, footerContact, footerCredit }) => (
+        {({ social, footerContact, footerCredit }) => (
             <div className="wrapper">
                 <Header />
 				{children}
