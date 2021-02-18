@@ -7,71 +7,54 @@ import Layout from "../../layout/Layout";
 import Seo from "../../layout/Seo";
 
 import Article from "../../components/Article";
-import Sponsors from "../../components/Sponsors";
+import Sidebar from "../../components/Sidebar";
 
-import { GlobalContext } from "../../layout/GlobalContext";
 import { fetchAPI } from "../../lib/api";
 import { replaceImages } from "../../lib/replaceImages";
 import { getStrapiMedia } from "../../lib/media";
 
 const News = ({ newsPage, news }) => {
     return (
-		<GlobalContext.Consumer>
-			{({ sponsors }) => (
-		        <Layout>
-		            <Seo seo={newsPage.seo} />
-					<section className="main">
-						<div className="container">
-							<div className="row stretch">
-								<div className="col-lg-8 col-md-12">
-									<div className="row">
-										<div className="col-lg-12">
-											<h1>
-												{news.article.title}
-											</h1>
-										</div>
-									</div>
-									<div className="row">
-										<div className="col-lg-12">
-											<img src={getStrapiMedia(news.article.image)} className="news-article-image" />
-										</div>
-						            </div>
-									<div className="row">
-										<div className="col-lg-12">
-											<ReactMarkdown source={replaceImages(news.article.content)} escapeHtml={false} />
-										</div>
-						            </div>
-									<div className="row margin-top-30">
-										<div className="col-lg-12">
-											<Link href="/">
-												← Back to News
-											</Link>
-										</div>
-						            </div>
-								</div>
-								<div className="col-lg-4 col-md-12">
-									<Sponsors sponsors={sponsors} />
+        <Layout>
+            <Seo seo={newsPage.seo} />
+			<section className="main">
+				<div className="container">
+					<div className="row stretch">
+						<div className="col-lg-8 col-md-12">
+							<div className="row">
+								<div className="col-lg-12">
+									<h1>
+										{news.article.title}
+									</h1>
 								</div>
 							</div>
+							<div className="row">
+								<div className="col-lg-12">
+									<img src={getStrapiMedia(news.article.image)} className="news-article-image" />
+								</div>
+				            </div>
+							<div className="row">
+								<div className="col-lg-12">
+									<ReactMarkdown source={replaceImages(news.article.content)} escapeHtml={false} />
+								</div>
+				            </div>
+							<div className="row margin-top-30">
+								<div className="col-lg-12">
+									<Link href="/">
+										← Back to News
+									</Link>
+								</div>
+				            </div>
 						</div>
-					</section>
-		        </Layout>
-			)}
-		</GlobalContext.Consumer>
+						<div className="col-lg-4 col-md-12">
+							<Sidebar />
+						</div>
+					</div>
+				</div>
+			</section>
+        </Layout>
     );
 };
-
-// export async function getStaticPaths() {
-//     const news = await fetchAPI("/stories");
-//     return {
-//         paths: news.map(noos => ({
-//             params: {
-//                 slug: noos.slug,
-//             },
-//         })),
-//         fallback: false,
-//     };
-// }
 
 export async function getServerSideProps({ params }) {
     const [newsPage, news] = await Promise.all([
@@ -79,8 +62,7 @@ export async function getServerSideProps({ params }) {
         fetchAPI(`/stories?slug=${params.slug}`),
     ]);
     return {
-        props: { newsPage, news: news[0] },
-        revalidate: 1,
+        props: { newsPage, news: news[0] }
     };
 }
 
