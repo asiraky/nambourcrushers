@@ -1,4 +1,4 @@
-import { getStrapiMedia } from "../lib/media";
+import { getStrapiMedia } from '../lib/media';
 
 export function replaceImages(content) {
     return content.replace(/(!\[.*?\]\()(.+?)(\))/g, function(whole, a, b, c) {

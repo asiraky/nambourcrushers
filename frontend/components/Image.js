@@ -1,4 +1,4 @@
-import { getStrapiMedia } from "../lib/media";
+import { getStrapiMedia } from '../lib/media';
 
 const Image = ({ image }) => {
     const imageUrl = getStrapiMedia(image);

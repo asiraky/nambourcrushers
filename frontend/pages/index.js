@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../layout/Layout";
-import Seo from "../layout/Seo";
+import Layout from '../layout/Layout';
+import Seo from '../layout/Seo';
 
-import Article from "../components/Article";
-import Sidebar from "../components/Sidebar";
+import Article from '../components/Article';
+import Sidebar from '../components/Sidebar';
 
-import { fetchAPI } from "../lib/api";
-import { getStrapiMedia } from "../lib/media";
+import { fetchAPI } from '../lib/api';
+import { getStrapiMedia } from '../lib/media';
 
 const News = ({ newsPage, news }) => {
 	const image = getStrapiMedia(newsPage.hero.image[0]);
@@ -50,12 +50,11 @@ const News = ({ newsPage, news }) => {
 
 export async function getServerSideProps() {
     const [newsPage, news] = await Promise.all([
-        fetchAPI("/news-page"),
-        fetchAPI("/stories"),
+        fetchAPI('/news-page'),
+        fetchAPI('/stories'),
     ]);
     return {
-        props: { newsPage, news },
-        //revalidate: 1,
+        props: { newsPage, news }
     };
 }
 

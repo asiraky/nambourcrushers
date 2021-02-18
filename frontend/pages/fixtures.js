@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../layout/Layout";
-import Seo from "../layout/Seo";
+import Layout from '../layout/Layout';
+import Seo from '../layout/Seo';
 
-import Fixture from "../components/Fixture";
-import Sidebar from "../components/Sidebar";
+import Fixture from '../components/Fixture';
+import Sidebar from '../components/Sidebar';
 
-import { fetchAPI } from "../lib/api";
+import { fetchAPI } from '../lib/api';
 import { DateTime } from 'luxon';
 
 const Fixtures = ({ fixturesPage, fixtures }) => {
@@ -63,7 +63,7 @@ const Fixtures = ({ fixturesPage, fixtures }) => {
 export async function getServerSideProps() {
 	const now = DateTime.now().toFormat('yyyy-LL-dd');
     const [fixturesPage, fixtures] = await Promise.all([
-        fetchAPI("/fixtures-page"),
+        fetchAPI('/fixtures-page'),
         fetchAPI(`/fixtures?_sort=round:ASC&date_lte=${now}`)
     ]);
     return {

@@ -1,16 +1,16 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import Layout from "../../layout/Layout";
-import Seo from "../../layout/Seo";
+import Layout from '../../layout/Layout';
+import Seo from '../../layout/Seo';
 
-import Sidebar from "../../components/Sidebar";
+import Sidebar from '../../components/Sidebar';
 
-import { fetchAPI } from "../../lib/api";
-import { replaceImages } from "../../lib/replaceImages";
-import { getStrapiMedia } from "../../lib/media";
+import { fetchAPI } from '../../lib/api';
+import { replaceImages } from '../../lib/replaceImages';
+import { getStrapiMedia } from '../../lib/media';
 
 const Event = ({ eventsPage, event }) => {
     return (
@@ -57,7 +57,7 @@ const Event = ({ eventsPage, event }) => {
 
 export async function getServerSideProps({ params }) {
     const [eventsPage, events] = await Promise.all([
-        fetchAPI("/events-page"),
+        fetchAPI('/events-page'),
         fetchAPI(`/events?slug=${params.slug}`),
     ]);
     return {

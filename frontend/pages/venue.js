@@ -1,13 +1,13 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-import Layout from "../layout/Layout";
-import Seo from "../layout/Seo";
+import Layout from '../layout/Layout';
+import Seo from '../layout/Seo';
 
-import Sidebar from "../components/Sidebar";
+import Sidebar from '../components/Sidebar';
 
-import { fetchAPI } from "../lib/api";
-import { replaceImages } from "../lib/replaceImages";
+import { fetchAPI } from '../lib/api';
+import { replaceImages } from '../lib/replaceImages';
 
 const Venue = ({ venuePage }) => {
     return (
@@ -42,7 +42,7 @@ const Venue = ({ venuePage }) => {
 
 export async function getServerSideProps() {
     const [venuePage] = await Promise.all([
-        fetchAPI("/venue-page"),
+        fetchAPI('/venue-page'),
     ]);
     return {
         props: { venuePage }

@@ -37,12 +37,11 @@ const Events = ({ eventsPage, events }) => {
 
 export async function getServerSideProps() {
     const [eventsPage, events] = await Promise.all([
-        fetchAPI("/events-page"),
-        fetchAPI("/events"),
+        fetchAPI('/events-page'),
+        fetchAPI('/events'),
     ]);
     return {
-        props: { eventsPage, events },
-        //revalidate: 1,
+        props: { eventsPage, events }
     };
 }
 

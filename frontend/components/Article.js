@@ -1,5 +1,5 @@
-import Link from "next/link"
-import BackgroundImage from "./BackgroundImage";
+import Link from 'next/link'
+import BackgroundImage from './BackgroundImage';
 
 const Article = ({ item, link }) => {
     return (

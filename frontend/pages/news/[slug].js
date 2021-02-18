@@ -1,17 +1,17 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-import Layout from "../../layout/Layout";
-import Seo from "../../layout/Seo";
+import Layout from '../../layout/Layout';
+import Seo from '../../layout/Seo';
 
-import Article from "../../components/Article";
-import Sidebar from "../../components/Sidebar";
+import Article from '../../components/Article';
+import Sidebar from '../../components/Sidebar';
 
-import { fetchAPI } from "../../lib/api";
-import { replaceImages } from "../../lib/replaceImages";
-import { getStrapiMedia } from "../../lib/media";
+import { fetchAPI } from '../../lib/api';
+import { replaceImages } from '../../lib/replaceImages';
+import { getStrapiMedia } from '../../lib/media';
 
 const News = ({ newsPage, news }) => {
     return (
@@ -58,7 +58,7 @@ const News = ({ newsPage, news }) => {
 
 export async function getServerSideProps({ params }) {
     const [newsPage, news] = await Promise.all([
-        fetchAPI("/news-page"),
+        fetchAPI('/news-page'),
         fetchAPI(`/stories?slug=${params.slug}`),
     ]);
     return {

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import BackgroundImage from "./BackgroundImage";
-import { fetchAPI } from "../lib/api";
-import { GlobalContext } from "../layout/GlobalContext";
+import BackgroundImage from './BackgroundImage';
+import { fetchAPI } from '../lib/api';
+import { GlobalContext } from '../layout/GlobalContext';
 
 const Sidebar = () => {
     return (
@@ -19,18 +19,18 @@ const Sidebar = () => {
 							</div>
 							<div className="sidebar-fixtures-item-match">
 								<div className="sidebar-fixtures-item-match-cell">
-									<div className="sidebar-fixtures-item-match-cell-team crushers"></div>
+									<div className={`sidebar-fixtures-item-match-cell-team ${upcoming.location === 'Home' ? 'crushers' : 'guest'} `}></div>
 									<div className="sidebar-fixtures-item-match-cell-team-name">
-										Nambour Crushers
+										{upcoming.location === 'Home' ? 'Nambour Crushers' : upcoming.opposition }
 									</div>
 								</div>
 								<div className="sidebar-fixtures-item-match-cell middle">
 									vs
 								</div>
 								<div className="sidebar-fixtures-item-match-cell">
-									<div className="sidebar-fixtures-item-match-cell-team guest"></div>
+								<div className={`sidebar-fixtures-item-match-cell-team ${upcoming.location === 'Home' ? 'guest' : 'crushers'} `}></div>
 									<div className="sidebar-fixtures-item-match-cell-team-name">
-										{upcoming.opposition}
+										{upcoming.location === 'Home' ? upcoming.opposition : 'Nambour Crushers' }
 									</div>
 								</div>
 							</div>

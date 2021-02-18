@@ -1,13 +1,13 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-import Layout from "../layout/Layout";
-import Seo from "../layout/Seo";
+import Layout from '../layout/Layout';
+import Seo from '../layout/Seo';
 
-import Sidebar from "../components/Sidebar";
+import Sidebar from '../components/Sidebar';
 
-import { fetchAPI } from "../lib/api";
-import { replaceImages } from "../lib/replaceImages";
+import { fetchAPI } from '../lib/api';
+import { replaceImages } from '../lib/replaceImages';
 
 const Contact = ({ contactPage }) => {
     return (
@@ -42,11 +42,10 @@ const Contact = ({ contactPage }) => {
 
 export async function getServerSideProps() {
     const [contactPage] = await Promise.all([
-        fetchAPI("/contact-page"),
+        fetchAPI('/contact-page')
     ]);
     return {
-        props: { contactPage },
-        //revalidate: 1,
+        props: { contactPage }
     };
 }
 
